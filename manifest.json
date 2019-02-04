@@ -2,7 +2,7 @@
 	"name": "Gmail Permalinker",
 	"short_name": "Gmail Permalinker",
 	"description": "Get a permalink to an email in Gmail",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "Sriram Ganesan<contact@sriramg.io>",
 	"content_scripts": [{
 		"matches": [

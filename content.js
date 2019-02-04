@@ -6,10 +6,10 @@ const writeClipboard = (str) => {
 	copyFrom.select();
 	document.execCommand('copy');
 	document.body.removeChild(copyFrom);
-}
+};
 
 // Initialize the InboxSDK
-InboxSDK.load('1', 'mail_linker').then(function(sdk){
+InboxSDK.load('1', 'sdk_mail_linker_80b609fbc9').then(function(sdk){
 	var barMessage;
 
 	// Whenever a message is loaded, add a menu button to the More menu
@@ -35,7 +35,7 @@ InboxSDK.load('1', 'mail_linker').then(function(sdk){
 			return;
 		}
 
-		writeClipboard('https://mail.google.com/mail/u/0/#search/rfc822msgid:' + event.data.result);
+		writeClipboard('https://mail.google.com/mail/u/0/#search/rfc822msgid:' + encodeURIComponent(event.data.result));
 		barMessage.resolve();
 	});
 
